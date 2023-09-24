@@ -225,3 +225,240 @@ word = 'Python'
 # deskripsi['domisili'] = 'bogor'
 # print(deskripsi['domisili'])
 # print(deskripsi)
+
+''' 🗺️LOOPING🗺️ '''
+# kota = ['Jakarta', 'Medan', 'Samarinda', 'Makassar', 'Ambon']
+# text = 'Saya sedang belajar python'
+# data_int = 151
+deskripsi = {
+  'nama': 'faiz',
+  'umur': 28,
+  'perempuan': False
+}
+
+# print(type(kota), type(text), type(deskripsi), type(data_int))
+
+# for x in kota:
+#   print(x)
+
+# for x in text:
+#   print(x)
+
+# for x in deskripsi:
+#   # print(x) # return KEY
+#   # print(deskripsi[x]) # return VALUE
+#   print(x, deskripsi[x])
+
+# print(deskripsi.items())
+# print(deskripsi.copy().items())
+
+# for key, value in deskripsi.items():
+#   print(key, value)
+
+# for x in str(data_int):
+#   print(x)
+
+# index = 0
+
+# while index < 5:
+#   print('Parameter memenuhi dengan nilai index ' + str(index))
+#   index += 1
+
+
+# data = [
+#   {
+#     'nama': 'faiz',
+#     'perempuan': False
+#   },
+#   {
+#     'nama': 'bejo',
+#     'perempuan': False
+#   },
+#   {
+#     'nama': 'andi',
+#     'perempuan': False
+#   },
+#   {
+#     'nama': 'putri',
+#     'perempuan': True
+#   },
+#   {
+#     'nama': 'dimas',
+#     'perempuan': False
+#   },
+# ]
+
+# index = 0
+
+# while not data[index]['perempuan']:
+#   print(f"{data[index]['nama']} adalah seorang lakilaki")
+#   index += 1
+
+# x = 5
+# y = 7
+# z = '5'
+# a = '7'
+
+# print(type(x), type(y))
+# print(type(z), type(a))
+
+# print(x+y)
+# print(z+a)
+# print(str(x) + z)
+
+''' 🗺️CONDITIONAL🗺️ '''
+# print(2 == 3)
+# print(1 != 1)
+# print(2 < 3)
+# print(2 > 3)
+# print(2 <= 3)
+# print(2 >= 3)
+
+# ibukota = True
+# print(not ibukota)
+
+# x = 5
+# y = 7
+# z = 5
+
+# print(x == z or x == y)
+
+# print(True or True)
+# print(True or False)
+# print(False or True)
+# print(False or False)
+
+# print(False or False or True)
+
+# print(True and True)
+# print(True and False)
+# print(False and True)
+# print(False and False)
+
+# print(True and True and False)
+
+# nama = 'putri'
+
+# if nama == 'faiz':
+#   print('Selamat datang faiz')
+# elif nama == 'bejo':
+#   print('Bejo adalah anak yang beruntung')
+# else:
+#   print('Maaf anda bukan faiz maupun bejo')
+
+# print(True | True)
+# print(True & False)
+
+# match nama:
+#   case 'faiz':
+#     print('Selamat datang faiz')
+#   case 'bejo':
+#     print('Bejo adalah anak yang beruntung')
+#   case _:
+#     print('Maaf anda bukan faiz maupun bejo')
+
+''' 🗺️FUNCTION🗺️ '''
+
+# def x():
+#   print('hello world')
+
+# x()
+# x()
+# x()
+# x()
+# x()
+
+# def get_nama(nama):
+#   print(f'anda memasukkan kata {nama}')
+
+# get_nama('Jawa Barat')
+# get_nama('geocourse.id')
+# get_nama('webgis')
+# get_nama('python')
+# get_nama() # error, karena harus mendefinisikan argumen terlebih dahulu
+
+# def get_kelas(kelas='biru'):
+#   print(f'anda memasukkan kelas {kelas}')
+
+# get_kelas()
+# get_kelas('merah')
+# get_kelas('hijau')
+# get_kelas('ungu')
+
+# get_kelas(kelas='orange')
+
+# def get_list(input, list=['dimas', 'putri']):
+#   list.append(input)
+#   print(input, list)
+
+# get_list('faiz')
+# get_list('bejo')
+# get_list('budi')
+
+# def get_dict(key, value, dict={}):
+#   dict[key] = value
+#   print(key, value, dict)
+
+# get_dict('nama', 'faiz')
+# get_dict('domisili', 'bogor')
+# get_dict(value='python', key='skill')
+
+# def order_makan(makanan, *args):
+#   print('makanan:', makanan)
+#   for item in args:
+#     print('tambahan argumen:', item)
+
+# order_makan('burger')
+# order_makan('pizza', 'faiz', 'pizza hut', 'bogor')
+
+# def order_baju(jenis, *args, **kwargs):
+#   print('jenis:', jenis)
+#   for item in args:
+#     print('tambahan argumen:', item)
+#   for item in kwargs:
+#     print('tambahan keyword:', item, kwargs[item])
+
+# order_baju('kaos', 'uniqlo', ukuran='L')
+
+# def set_number(n):
+#   return lambda x: x + n
+
+# print(set_number(5))
+
+# data = [7, 5, 8, 3]
+# data.sort()
+# print(data)
+
+# data_buah = ['kiwi', 'jeruk', 'melon', 'semangka']
+# data_buah.sort()
+# print(data_buah)
+
+# buah = [
+#   ['kiwi', 7],
+#   ['jeruk', 5],
+#   ['melon', 8],
+#   ['semangka', 3]
+# ]
+
+# print(buah)
+
+# buah.sort()
+# print(buah)
+
+# buah.sort(key=lambda data: data[1])
+# print(buah)
+
+# buah.sort(key=lambda data: data[0])
+# print(buah)
+
+# def urutan(data):
+#   return data[0]
+
+''' 🗺️IMPORT🗺️ '''
+import numpy as np # import from external module
+from faiz.logic import data # import from user defined module 
+
+a = np.arange(15).reshape(3,5)
+print(a) # testing external module
+
+data('geocourse') # testing user defined module
