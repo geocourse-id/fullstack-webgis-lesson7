@@ -455,10 +455,303 @@ deskripsi = {
 #   return data[0]
 
 ''' 🗺️IMPORT🗺️ '''
-import numpy as np # import from external module
-from faiz.logic import data # import from user defined module 
+# import numpy as np # import from external module
+# from faiz.logic import data # import from user defined module 
 
-a = np.arange(15).reshape(3,5)
-print(a) # testing external module
+# a = np.arange(15).reshape(3,5)
+# print(a) # testing external module
 
-data('geocourse') # testing user defined module
+# data('geocourse') # testing user defined module
+
+''' 🗺️OBJECT ORIENTED PROGRAMMING - BASIC🗺️ '''
+# print('hello world') # berjalan di global scope
+
+# class Manusia:
+#   def __init__(self, nama, umur, perempuan):
+#     self.nama = nama
+#     self.umur = umur
+#     self.perempuan = perempuan
+
+# faiz = Manusia('faiz', 28, False)
+# faiz2 = Manusia('faiz', 28, False)
+# dinda = Manusia('dinda', 31, True)
+# ryan = Manusia('ryan', 24, False)
+
+# print('Faiz:', faiz)
+# print('Faiz2:', faiz2)
+# print('Dinda:', dinda)
+# print('Ryan:', ryan)
+
+# kirk = ["James Kirk", 34, "Captain"]
+# spock = ["Spock", 35, "Science Officer"]
+# mccoy = ["Leonard McCoy", "Chief Medical Officer"]
+
+# print('kirk', kirk[1])
+# print('spock', spock[1])
+# print('mccoy', mccoy[1])
+
+# print('kirk', len(kirk))
+# print('spock', len(spock))
+# print('mccoy', len(mccoy))
+
+# class Kucing:
+#   lokasi = 'Jakarta'
+
+#   def __init__(self, nama, warna, umur):
+#     self.nama_lengkap = nama
+#     self.warna = warna
+#     self.umur = umur
+
+#   def deskripsi(self, email):
+#     return f'{self.nama_lengkap} adalah kucing yang berwarna {self.warna}, berusia {self.umur} tahun, dan berlokasi di {self.lokasi}. Pesan ini dihasilkan oleh {email}'
+
+#   def bicara(self):
+#     return f'{self.nama_lengkap} berbicara meong'
+
+# kucing1 = Kucing('Billy', 'Hitam', 2)
+# kucing2 = Kucing('Chiki', 'Putih', 3)
+# kucing3 = Kucing('Billy', 'Hitam', 2)
+
+# print(kucing1 == kucing2)
+
+# def kucing(nama, warna, umur):
+#   return f'{nama}, {warna}, {umur}'
+
+# kucing_1 = kucing('Billy', 'Hitam', 2)
+# kucing_2 = kucing('Billy', 'Hitam', 2)
+
+# print(kucing_1 == kucing_2)
+
+
+# print(kucing1.nama) # error, tidak terdapat metode yang bernama 'nama'
+# print(kucing1.nama_lengkap)
+# print(kucing1.warna)
+# print(kucing1.lokasi)
+
+# kucing_baru = Kucing() # error karena yang didefinisikan di __init__() bersifat wajib
+
+# print(kucing1.nama_lengkap)
+# kucing1.nama_lengkap = 'Joki'
+# print(kucing1.nama_lengkap)
+
+# print(kucing1.lokasi)
+# kucing1.lokasi = 'Malaysia'
+# print(kucing1.lokasi)
+
+# print(kucing1.deskripsi('abc@gmail.com'))
+# print(kucing2.deskripsi('xyz@gmail.com'))
+
+# print(kucing1.bicara())
+# print(kucing2.bicara())
+
+''' 🗺️OBJECT ORIENTED PROGRAMMING - INHERITANCE🗺️ '''
+
+# Parent class
+# class OrangTua:
+#   gol_darah = 'O'
+#   kewarganegaraan = 'Indonesia'
+
+# Child inherit
+# class Anak(OrangTua):
+#   gol_darah = 'A'
+
+#   def __init__(self, nama):
+#     self.nama = nama
+
+# bejo = OrangTua()
+# bambang = Anak('Bambang')
+
+# print(bejo.gol_darah)
+
+# print(bambang.nama)
+# print(bambang.gol_darah)
+# print(bambang.kewarganegaraan)
+
+# import uuid
+
+# class Kucing:
+#   lokasi = 'Jakarta'
+
+#   def __init__(self, nama, warna, umur):
+#     self.nama_lengkap = nama
+#     self.warna = warna
+#     self.umur = umur
+
+#   def deskripsi(self, email):
+#     return f'{self.nama_lengkap} adalah kucing yang berwarna {self.warna}, berusia {self.umur} tahun, dan berlokasi di {self.lokasi}. Pesan ini dihasilkan oleh {email}'
+
+#   def bicara(self):
+#     return f'{self.nama_lengkap} berbicara meong'
+  
+# Anggora adalah turunan (inheritance) dari kelas Kucing
+# class Anggora(Kucing):
+#   tipe = 'Anggora'
+
+#   def sertifikat(self):
+#     return uuid.uuid1()
+
+# chiki_anggora = Anggora('Chiki', 'Putih', 3)
+
+# print(chiki_anggora)
+# print(chiki_anggora.tipe)
+# print(chiki_anggora.lokasi)
+
+# print(chiki_anggora.nama_lengkap) # error karena def init di class sebelumnya tidak ter-inherit
+# chiki_anggora.nama_lengkap = 'Chiki Anggora'
+# print(chiki_anggora.nama_lengkap) # berhasil karena nama_lengkap didefinisikan kembali
+
+# class Munchkin(Kucing):
+#   tipe = 'Munchkin'
+
+#   def sertifikat(self):
+#     return uuid.uuid1()
+
+# chiki = Munchkin('Chiki', 'Putih', 3)
+# print(chiki)
+
+# metode dari class Kucing
+# print(chiki.nama_lengkap)
+# print(chiki.warna)
+# print(chiki.umur)
+# print(chiki.lokasi)
+# print(chiki.bicara())
+
+# metode dari class Muchkin
+# print(chiki.tipe)
+# print(chiki.sertifikat())
+
+''' 🗺️PEP 8🗺️ '''
+
+# def data(nama, kelas, kategori, warna, bentuk, luas, pemilik, lokasi):
+#   return f'{nama}, {kelas}, {kategori}, {bentuk}, {warna}, {luas}, {lokasi}, {pemilik}'
+
+# # ✅benar
+# faiz = data('faiz', 'asia', 
+#             'manusia', 'coklat', 
+#             'lonjong', 5, 
+#             'abc', 'bogor')
+
+# # ✅benar
+# faiz1 = data('faiz', 'asia', 'manusia', 'coklat',
+#              'lonjong', 5, 'abc', 'bogor')
+
+# # ❌salah
+# faiz2 = data('faiz', 'asia', 
+#     'manusia', 'coklat', 
+#             'lonjong', 5, 
+#         'abc', 'bogor')
+
+# # ❌salah
+# faiz3 = data('faiz', 'asia', 'manusia', 
+#              'coklat','lonjong', 
+#              5, 'abc', 'bogor')
+
+# # ❌salah
+# faiz4 = data('faiz', 'asia', 'manusia', 'coklat',
+#   'lonjong', 5, 'abc', 'bogor')
+
+# print(faiz)
+# print(faiz4)
+
+
+# perempuan = False
+# lokasi = True
+
+# # ✅benar
+# if perempuan:
+#   print('Perempuan')
+# elif lokasi:
+#   print('Berada di lokasi')
+# else:
+#   print('Bukan perempuan dan tidak ada di lokasi')
+
+
+# # ❌salah
+# if perempuan:
+#   print('Perempuan')
+# elif lokasi:
+#         print('Berada di lokasi')
+# else:
+#       print('Bukan perempuan dan tidak ada di lokasi')
+
+# # ✅benar
+# list_data1 = [1,2,3,4,5,6]
+# list_data2 = [
+#   1,2,
+#   3,4,
+#   5,6]
+# list_data3 = [
+#   1,2,
+#   3,4,
+#   5,6
+# ]
+
+# # ❌salah
+# list_data4 = [1,
+#   2,3,
+#   4,5,6]
+
+# list_data5 = [
+#   1,
+#   2,3,
+#   4,5,6
+# ]
+
+# print(list_data1)
+# print(list_data2)
+# print(list_data3)
+# print(list_data4)
+# print(list_data5)
+
+# ✅benar
+# import re
+import os
+
+# ✅benar
+# import re, os
+
+# ✅benar
+# from re import search
+
+# text = 'abciobcklncs vjvkcn ackbxklad'
+
+# search()
+# os
+
+# ❌salah
+# from re import *
+# search()
+
+# PENULISAN VARIABEL, FUNGSI, CLASS dll.
+
+namaLengkap = 'Ahmad Zaenun Faiz' # ❌contoh yang salah. standar python menggunakan kebab_case, bukan camelCase
+nama_lengkap = 'Ahmad Zaenun Faiz' # ✅contoh yang benar
+
+def get_nama(): # ✅ fungsi di python menggunakan kebab_case
+  pass
+
+def getNama(): # ❌contoh yang salah
+  pass
+
+class OrangTua: # ✅ class didefinisikan menggunakan Pascal case
+  pass
+
+class orangtua: # ❌contoh yang salah
+  pass
+
+class orang_tua: # ❌contoh yang salah
+  pass
+
+class orangTua: # ❌contoh yang salah
+  pass
+
+# tidak bisa dibedakan mana yang fungsi dan class
+get_nama()
+orang_tua()
+# class menggunakan Pascal Case agar bisa dibedakan dengan fungsi
+OrangTua()
+
+
+# Untik memnunjukkan variabel tersebut konstant
+PI = 22/7
+KLASIFIKASI_ADMINISTRASI = ('Provinsi', 'Kabupaten', 'Kecamatan', 'Desa')
